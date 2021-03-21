@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\james\\OneDrive\\Escritorio\\App\\OAPP\\OAPP\\OAPP\\OAPP.csproj": {}
+    "D:\\Usuario\\Universidad\\OAPP\\OAPP\\OAPP\\OAPP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\james\\OneDrive\\Escritorio\\App\\OAPP\\OAPP\\OAPP\\OAPP.csproj": {
+    "D:\\Usuario\\Universidad\\OAPP\\OAPP\\OAPP\\OAPP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\james\\OneDrive\\Escritorio\\App\\OAPP\\OAPP\\OAPP\\OAPP.csproj",
+        "projectUniqueName": "D:\\Usuario\\Universidad\\OAPP\\OAPP\\OAPP\\OAPP.csproj",
         "projectName": "OAPP",
-        "projectPath": "C:\\Users\\james\\OneDrive\\Escritorio\\App\\OAPP\\OAPP\\OAPP\\OAPP.csproj",
-        "packagesPath": "C:\\Users\\james\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\james\\OneDrive\\Escritorio\\App\\OAPP\\OAPP\\OAPP\\obj\\",
+        "projectPath": "D:\\Usuario\\Universidad\\OAPP\\OAPP\\OAPP\\OAPP.csproj",
+        "packagesPath": "C:\\Users\\Nicol\\.nuget\\packages\\",
+        "outputPath": "D:\\Usuario\\Universidad\\OAPP\\OAPP\\OAPP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\james\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

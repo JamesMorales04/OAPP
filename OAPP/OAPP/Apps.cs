@@ -57,7 +57,7 @@ namespace OAPP
 
         private void App_Exited(object sender, System.EventArgs e)
         {
-            Console.WriteLine(sender);
+            
             Console.WriteLine("aaaaaaaaaaa");
             //comunications.sendMessage("{ cmd:info, src:GUI, dst:GUI, msg:halt}", 8081);
         }
