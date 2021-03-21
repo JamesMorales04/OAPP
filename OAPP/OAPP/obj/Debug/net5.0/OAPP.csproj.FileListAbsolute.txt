@@ -1,0 +1,16 @@
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.csprojAssemblyReference.cache
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.AssemblyInfoInputs.cache
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.AssemblyInfo.cs
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.csproj.CoreCompileInputs.cache
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\bin\Debug\net5.0\OAPP.exe
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\bin\Debug\net5.0\OAPP.deps.json
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\bin\Debug\net5.0\OAPP.runtimeconfig.json
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\bin\Debug\net5.0\OAPP.runtimeconfig.dev.json
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\bin\Debug\net5.0\OAPP.dll
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\bin\Debug\net5.0\ref\OAPP.dll
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\bin\Debug\net5.0\OAPP.pdb
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.dll
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\ref\OAPP.dll
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.pdb
+C:\Users\james\OneDrive\Escritorio\App\OAPP\OAPP\OAPP\obj\Debug\net5.0\OAPP.genruntimeconfig.cache
