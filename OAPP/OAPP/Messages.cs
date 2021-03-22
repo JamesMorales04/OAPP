@@ -31,14 +31,14 @@ namespace OAPP
 
             string[] msgClean = msg.Replace("<EOF>", "").Replace("{", "").Replace("}", "").Split(',');
 
-            if (msgClean.Length > 2)
+            string[] action = msgClean[0].Split(':');
+  
+
+            if (msgClean[2].Split(':')[1] == "APP")
             {
                 longMessage(msgClean, msg);
             }
-            else
-            {
-                //shortMessage(msgClean);
-            }
+
 
         }
 

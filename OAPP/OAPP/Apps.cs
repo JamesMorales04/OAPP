@@ -47,7 +47,19 @@ namespace OAPP
             pidApps[index].StartInfo.FileName = "notepad.exe";
 
             pidApps[index].EnableRaisingEvents = true;
-            pidApps[index].Exited += new EventHandler(App_Exited);
+
+            switch (index)
+            {
+                case 1:
+                    pidApps[index].Exited += new EventHandler(App_Exited1);
+                    break;
+                case 2:
+                    pidApps[index].Exited += new EventHandler(App_Exited2);
+                    break;
+                case 3:
+                    pidApps[index].Exited += new EventHandler(App_Exited3);
+                    break;
+            }
 
             pidApps[index].Start();
 
@@ -55,9 +67,21 @@ namespace OAPP
 
         }
 
-        private void App_Exited(object sender, System.EventArgs e)
+        private void App_Exited1(object sender, System.EventArgs e)
         {
             
+            Console.WriteLine("aaaaaaaaaaa");
+            //comunications.sendMessage("{ cmd:info, src:GUI, dst:GUI, msg:halt}", 8081);
+        }
+        private void App_Exited2(object sender, System.EventArgs e)
+        {
+
+            Console.WriteLine("aaaaaaaaaaa");
+            //comunications.sendMessage("{ cmd:info, src:GUI, dst:GUI, msg:halt}", 8081);
+        }
+        private void App_Exited3(object sender, System.EventArgs e)
+        {
+
             Console.WriteLine("aaaaaaaaaaa");
             //comunications.sendMessage("{ cmd:info, src:GUI, dst:GUI, msg:halt}", 8081);
         }
