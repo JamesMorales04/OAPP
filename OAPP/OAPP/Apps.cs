@@ -50,6 +50,7 @@ namespace OAPP
 
                     pidApps[index].EnableRaisingEvents = true;
 
+
                     switch (index)
                     {
                         case 0:

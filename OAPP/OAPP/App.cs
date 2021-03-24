@@ -18,6 +18,7 @@ namespace OAPP
             //Apps prueba = new Apps(comunicationSet);
 
             //prueba.startApps("APP3");
+            //prueba.startApps("APP1");
 
             //messages.Actions("{cmd:start, src:GUI, dst:APP, msg:\"APP1\"}");
             //messages.Actions("{cmd:start, src:GUI, dst:APP, msg:\"APP2\"}");
