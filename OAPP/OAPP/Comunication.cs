@@ -21,7 +21,7 @@ namespace OAPP
         {
             
             msg += "<EOF>";
-            Console.WriteLine(msg);
+            Console.WriteLine("APP "+msg);
             byte[] msgAux = Encoding.ASCII.GetBytes(msg);
             StartClient(msgAux, port);
 

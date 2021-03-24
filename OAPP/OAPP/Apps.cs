@@ -85,7 +85,12 @@ namespace OAPP
         public void closeApp(string app)
         {
             int index = int.Parse(app[3].ToString()) - 1;
-            pidApps[index].CloseMainWindow();
+
+            if (pidApps[index] != null)
+            {
+                pidApps[index].CloseMainWindow();
+            }
+            
             pidApps[index] = null;
 
         }
