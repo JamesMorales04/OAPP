@@ -108,6 +108,7 @@ namespace OAPP
                             break;
                         }
                     }
+                    Console.WriteLine("data" + data);
                     if (data != "<EOF>")
                     {
                         messages.Actions(data);

@@ -67,7 +67,7 @@ namespace OAPP
                     pidApps[index].Start();
 
                     string pid = childPID(app);
-
+                    Console.WriteLine("niga" + pid);
                     return "{cmd:info,src:APP,dst:GUI,msg:\"" + app + "->" + pid + "\"}";
                 }
                 else
@@ -89,6 +89,7 @@ namespace OAPP
             if (pidApps[index] != null)
             {
                 pidApps[index].CloseMainWindow();
+                pidApps[index].Kill();
             }
             
             pidApps[index] = null;
@@ -98,7 +99,7 @@ namespace OAPP
         {
             pidApps[0] = null;
             Console.WriteLine("aaaaaaaaaaa");
-            comunications.sendMessage("cmd:halt,src:APP,dst:GUI,msg:\"APP1\"}", 8080);
+            comunications.sendMessage("{cmd:halt,src:APP,dst:GUI,msg:\"APP1\"}", 8083);
         }
         private void App_Exited2(object sender, System.EventArgs e)
         {

@@ -44,7 +44,7 @@ namespace OAPP
                     case "start":
                         inmsg = msgClean[3].Split('\"');
                         info = functions.startApps(inmsg[1]);
-                        comunication.sendMessage(info, 8080);
+                        comunication.sendMessage(info, 8083);
                         break;
                     case "halt":
                         inmsg = msgClean[3].Split('\"');
@@ -73,13 +73,13 @@ namespace OAPP
             switch (value)
             {
                 case 0:
-                    msg = "{codterm:0,msg:\"OK\"}<EOF>";
+                    msg = "{codterm:0,msg:\"OK\"}";
                     break;
                 case 1:
-                    msg = "{codterm:1,msg:\"0\"}<EOF>";
+                    msg = "{codterm:1,msg:\"0\"}";
                     break;
                 case 2:
-                    msg = "{codterm:2,msg:\"Err\"}<EOF>";
+                    msg = "{codterm:2,msg:\"Err\"}";
                     break;
             }
             return msg;

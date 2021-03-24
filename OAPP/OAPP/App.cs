@@ -20,9 +20,9 @@ namespace OAPP
             //prueba.startApps("APP3");
             //prueba.startApps("APP1");
 
-            //comunicationSet.sendMessage("", 8083);
+            comunicationSet.sendMessage("{cmd:start, src:GUI, dest:APP, msg:\"APP1\"}", 8083);
             //messages.Actions("");
-            //messages.Actions("{cmd:start, src:GUI, dst:APP, msg:\"APP2\"}");
+            //messages.Actions("{cmd:start,src:GUI,dest:APP,msg:\"APP1\"}");
 
         }
 
