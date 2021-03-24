@@ -12,18 +12,21 @@ namespace OAPP
 
             comunicationSet.setterMessages(messages);
 
-            Thread listener = new Thread(() => comunicationSet.StartListening(8080));
+            Thread listener = new Thread(() => comunicationSet.StartListening(8083));
             listener.Start();
-            
-            Apps prueba = new Apps(comunicationSet);
 
-            prueba.startApps("APP3");
+            //Apps prueba = new Apps(comunicationSet);
+
+            //prueba.startApps("APP3");
+
+            //messages.Actions("{cmd:start, src:GUI, dst:APP, msg:\"APP1\"}");
+            //messages.Actions("{cmd:start, src:GUI, dst:APP, msg:\"APP2\"}");
 
         }
 
         public void stopApp()
         {
-            //TODO:
+            System.Environment.Exit(1);
         }
     }
 }

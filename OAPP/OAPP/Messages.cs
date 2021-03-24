@@ -28,64 +28,60 @@ namespace OAPP
 
         public void Actions(string msg)
         {
-
+            Console.WriteLine(msg);
+            string info = "";
+            string[] inmsg;
             string[] msgClean = msg.Replace("<EOF>", "").Replace("{", "").Replace("}", "").Split(',');
 
             string[] action = msgClean[0].Split(':');
-  
+            string[] dts = msgClean[2].Split(':');
 
-            if (msgClean[2].Split(':')[1] == "APP")
+
+            if (dts[1] == "APP")
             {
-                longMessage(msgClean, msg);
-            }
-
-
-        }
-
-        private void longMessage(string[] msgClean, string rawMsg)
-        {
-            switch (msgClean[0].Split(':')[1])
-            {
-                case "info":
-                    if (msgClean[3].Split(':')[1] == "halt")
-                    {
+                switch (action[1])
+                {
+                    case "start":
+                        Console.WriteLine("hola");
+                        inmsg = msgClean[3].Split('\"');
+                        info = functions.startApps(inmsg[1]);
+                        comunication.sendMessage(info, 8081);
+                        break;
+                    case "halt":
+                        inmsg = msgClean[3].Split('\"');
+                        functions.closeApp(inmsg[1]);
+                        break;
+                    case "stop":
                         core.stopApp();
-                    }
-                    else
-                    {
-                        comunication.sendMessage(functions.childPID(msgClean[3].Split(':')[1]), 8081);
-                    }
-                    break;
-                case "stop":
-                    core.stopApp();
-                    break;
-
-                default:
-                    break;
-
-
-
+                        break;
+                }
             }
 
-            switch (msgClean[1].Split(':')[1])
-            {
-                case "GUI":
-                    comunication.sendMessage(rawMsg, 8081);
-                    break;
-                case "GestorArc":
-                    comunication.sendMessage(rawMsg, 8082);
-                    break;
-                case "kernel":
-                    //core.stopKernel();
-                    break;
-                case "APP":
-                    comunication.sendMessage(rawMsg, 8083);
-                    break;
-                default:
-                    break;
-            }
+
         }
 
+        public string Response()
+        {
+            var seed = Environment.TickCount;
+            var random = new Random(seed);
+
+            var value = random.Next(0, 2);
+            string msg = "";
+
+            switch (value)
+            {
+                case 0:
+                    msg = "{codterm:0, msg:”OK”}";
+                    break;
+                case 1:
+                    msg = "{codterm:1, msg:”0”}";
+                    break;
+                case 2:
+                    msg = "{codterm:2, msg:”Err”}";
+                    break;
+            }
+            return msg;
+        }
 
 
 

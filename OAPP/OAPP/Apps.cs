@@ -36,54 +36,77 @@ namespace OAPP
             return "";
         }
 
-        public void startApps(string app)
+        public string startApps(string app)
         {
-
-            int index = int.Parse(app[3].ToString()) - 1;
-
-
-            pidApps[index] = new Process();
-
-            pidApps[index].StartInfo.FileName = "notepad.exe";
-
-            pidApps[index].EnableRaisingEvents = true;
-
-            switch (index)
+            Console.WriteLine(app);
+            try
             {
-                case 1:
-                    pidApps[index].Exited += new EventHandler(App_Exited1);
-                    break;
-                case 2:
-                    pidApps[index].Exited += new EventHandler(App_Exited2);
-                    break;
-                case 3:
-                    pidApps[index].Exited += new EventHandler(App_Exited3);
-                    break;
+                int index = int.Parse(app[3].ToString()) - 1;
+                if (pidApps[index] == null)
+                {
+
+                    pidApps[index] = new Process();
+
+                    pidApps[index].StartInfo.FileName = "notepad.exe";
+
+                    pidApps[index].EnableRaisingEvents = true;
+                    Console.WriteLine(index);
+
+                    switch (index)
+                    {
+                        case 0:
+                            pidApps[index].Exited += new EventHandler(App_Exited1);
+                            break;
+                        case 1:
+                            pidApps[index].Exited += new EventHandler(App_Exited2);
+                            break;
+                        case 2:
+                            pidApps[index].Exited += new EventHandler(App_Exited3);
+                            break;
+                    }
+                    Console.WriteLine("-------------");
+
+                    pidApps[index].Start();
+
+                    string pid = childPID(app);
+
+                    return "{cmd:info, src:APP, dst:GUI, msg:\"" + app + "->" + pid + "\"}";
+                }
+                else
+                {
+                    return "{cmd:send, src:APP, dst:GUI, msg:\"Error->" + app + "already running\"}";
+                }
+
             }
-
-            pidApps[index].Start();
-
-            childPID(app);
-
+            catch (Exception)
+            {
+                return "{cmd:send, src:APP, dst:GUI, msg:\"Error->" + app + "not work\"}";
+            }
         }
 
+        public void closeApp(string app)
+        {
+            int index = int.Parse(app[3].ToString()) - 1;
+            pidApps[index].CloseMainWindow();
+
+        }
         private void App_Exited1(object sender, System.EventArgs e)
         {
             
             Console.WriteLine("aaaaaaaaaaa");
-            //comunications.sendMessage("{ cmd:info, src:GUI, dst:GUI, msg:halt}", 8081);
+            comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP1\"}", 8082);
         }
         private void App_Exited2(object sender, System.EventArgs e)
         {
 
-            Console.WriteLine("aaaaaaaaaaa");
-            //comunications.sendMessage("{ cmd:info, src:GUI, dst:GUI, msg:halt}", 8081);
+            Console.WriteLine("eeeeeeee");
+            comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP2\"}", 8082);
         }
         private void App_Exited3(object sender, System.EventArgs e)
         {
 
-            Console.WriteLine("aaaaaaaaaaa");
-            //comunications.sendMessage("{ cmd:info, src:GUI, dst:GUI, msg:halt}", 8081);
+            Console.WriteLine("iiiiiiiiiii");
+            comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP1\"}", 8082);
         }
 
     }
