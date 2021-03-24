@@ -113,8 +113,8 @@ namespace OAPP
                     {
                         messages.Actions(data);
                     }
-                    
 
+                    Console.WriteLine("hola perra");
                     byte[] msg = Encoding.ASCII.GetBytes(messages.Response());
 
                     handler.Send(msg);
