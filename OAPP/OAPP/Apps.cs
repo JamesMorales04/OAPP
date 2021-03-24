@@ -99,7 +99,7 @@ namespace OAPP
         {
             pidApps[0] = null;
             Console.WriteLine("aaaaaaaaaaa");
-            comunications.sendMessage("{cmd:halt,src:APP,dst:GUI,msg:\"APP1\"}", 8083);
+            comunications.sendMessage("{cmd:halt,src:APP,dst:GUI,msg:\"APP1\"}", 8080);
         }
         private void App_Exited2(object sender, System.EventArgs e)
         {
