@@ -95,19 +95,19 @@ namespace OAPP
         {
             pidApps[0] = null;
             Console.WriteLine("aaaaaaaaaaa");
-            comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP1\"}", 8080);
+            comunications.sendMessage("cmd:halt, src:APP, dst:GUI, msg:\"APP1\"}", 8080);
         }
         private void App_Exited2(object sender, System.EventArgs e)
         {
             pidApps[1] = null;
             Console.WriteLine("eeeeeeee");
-            comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP2\"}", 8080);
+            comunications.sendMessage("{cmd:halt, src:APP, dst:GUI, msg:\"APP2\"}", 8080);
         }
         private void App_Exited3(object sender, System.EventArgs e)
         {
             pidApps[2] = null;
             Console.WriteLine("iiiiiiiiiii");
-            comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP1\"}", 8080);
+            comunications.sendMessage("{cmd:halt, src:APP, dst:GUI, msg:\"APP3\"}", 8080);
         }
 
     }

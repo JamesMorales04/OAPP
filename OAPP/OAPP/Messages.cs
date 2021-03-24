@@ -37,7 +37,7 @@ namespace OAPP
             string[] dts = msgClean[2].Split(':');
 
 
-            if (dts[1] == "APP")
+            if (dts[1] == "APP" && msgClean.Length > 2)
             {
                 switch (action[1])
                 {
@@ -52,6 +52,9 @@ namespace OAPP
                         functions.closeApp(inmsg[1]);
                         break;
                     case "stop":
+                        functions.closeApp("APP1");
+                        functions.closeApp("APP2");
+                        functions.closeApp("APP3");
                         core.stopApp();
                         break;
                 }
