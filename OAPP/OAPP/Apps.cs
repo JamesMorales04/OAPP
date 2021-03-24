@@ -88,23 +88,24 @@ namespace OAPP
         {
             int index = int.Parse(app[3].ToString()) - 1;
             pidApps[index].CloseMainWindow();
+            pidApps[index] = null;
 
         }
         private void App_Exited1(object sender, System.EventArgs e)
         {
-            
+            pidApps[0] = null;
             Console.WriteLine("aaaaaaaaaaa");
             comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP1\"}", 8080);
         }
         private void App_Exited2(object sender, System.EventArgs e)
         {
-
+            pidApps[1] = null;
             Console.WriteLine("eeeeeeee");
             comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP2\"}", 8080);
         }
         private void App_Exited3(object sender, System.EventArgs e)
         {
-
+            pidApps[2] = null;
             Console.WriteLine("iiiiiiiiiii");
             comunications.sendMessage("{ cmd:send, src:APP, dst:GestorArc, msg:\"Log->Halt APP1\"}", 8080);
         }
