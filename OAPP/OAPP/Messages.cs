@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace OAPP
@@ -52,8 +53,11 @@ namespace OAPP
                         break;
                     case "stop":
                         functions.closeApp("APP1");
+                        Thread.Sleep(100);
                         functions.closeApp("APP2");
+                        Thread.Sleep(100);
                         functions.closeApp("APP3");
+                        Thread.Sleep(100);
                         core.stopApp();
                         break;
                 }
