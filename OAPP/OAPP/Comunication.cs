@@ -108,7 +108,7 @@ namespace OAPP
                             break;
                         }
                     }
-                    if (data != "")
+                    if (data != "<EOF>")
                     {
                         messages.Actions(data);
                     }

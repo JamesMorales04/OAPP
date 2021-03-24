@@ -32,6 +32,7 @@ namespace OAPP
             string[] inmsg;
             string[] msgClean = msg.Replace("<EOF>", "").Replace("{", "").Replace("}", "").Split(',');
 
+
             string[] action = msgClean[0].Split(':');
             string[] dts = msgClean[2].Split(':');
 
