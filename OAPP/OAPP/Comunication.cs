@@ -23,6 +23,7 @@ namespace OAPP
             msg += "<EOF>";
             Console.WriteLine("APP "+msg);
             byte[] msgAux = Encoding.ASCII.GetBytes(msg);
+            Console.WriteLine("---------------------------- ");
             StartClient(msgAux, port);
 
             Console.WriteLine(data);
@@ -48,11 +49,6 @@ namespace OAPP
                     Console.WriteLine("Socket connected to {0}", sender.RemoteEndPoint.ToString());
 
                     int bytesSent = sender.Send(msg);
-
-                    int bytesRec = sender.Receive(bytes);
-
-
-                    //messages.Actions(Encoding.ASCII.GetString(bytes, 0, bytesRec));
 
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();

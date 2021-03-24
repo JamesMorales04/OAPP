@@ -43,6 +43,7 @@ namespace OAPP
                     case "start":
                         inmsg = msgClean[3].Split('\"');
                         info = functions.startApps(inmsg[1]);
+                        Console.WriteLine("la info"+ info);
                         comunication.sendMessage(info, 8080);
                         break;
                     case "halt":
@@ -63,13 +64,13 @@ namespace OAPP
 
         public string Response()
         {
-            //var seed = Environment.TickCount;
-            //var random = new Random(seed);
+            var seed = Environment.TickCount;
+            var random = new Random(seed);
 
-            //var value = random.Next(0, 2);
-            string msg = "hola";
+            var value = random.Next(0, 2);
+            string msg = "";
 
-            /*switch (value)
+            switch (value)
             {
                 case 0:
                     msg = "{codterm:0,msg:\"OK\"}";
@@ -80,7 +81,7 @@ namespace OAPP
                 case 2:
                     msg = "{codterm:2,msg:\"Err\"}";
                     break;
-            }*/
+            }
             return msg;
         }
 
