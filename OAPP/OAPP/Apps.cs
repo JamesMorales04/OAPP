@@ -38,7 +38,6 @@ namespace OAPP
 
         public string startApps(string app)
         {
-            Console.WriteLine(app);
             try
             {
                 int index = int.Parse(app[3].ToString()) - 1;
@@ -50,7 +49,6 @@ namespace OAPP
                     pidApps[index].StartInfo.FileName = "notepad.exe";
 
                     pidApps[index].EnableRaisingEvents = true;
-                    Console.WriteLine(index);
 
                     switch (index)
                     {
@@ -64,23 +62,22 @@ namespace OAPP
                             pidApps[index].Exited += new EventHandler(App_Exited3);
                             break;
                     }
-                    Console.WriteLine("-------------");
 
                     pidApps[index].Start();
 
                     string pid = childPID(app);
 
-                    return "{cmd:info, src:APP, dst:GUI, msg:\"" + app + "->" + pid + "\"}";
+                    return "{cmd:info,src:APP,dst:GUI,msg:\"" + app + "->" + pid + "\"}";
                 }
                 else
                 {
-                    return "{cmd:send, src:APP, dst:GUI, msg:\"Error->" + app + "already running\"}";
+                    return "{cmd:send,src:APP,dst:GUI,msg:\"Error->" + app + "already running\"}";
                 }
 
             }
             catch (Exception)
             {
-                return "{cmd:send, src:APP, dst:GUI, msg:\"Error->" + app + "not work\"}";
+                return "{cmd:send,src:APP,dst:GUI,msg:\"Error->" + app + "not work\"}";
             }
         }
 
@@ -95,19 +92,19 @@ namespace OAPP
         {
             pidApps[0] = null;
             Console.WriteLine("aaaaaaaaaaa");
-            comunications.sendMessage("cmd:halt, src:APP, dst:GUI, msg:\"APP1\"}", 8080);
+            comunications.sendMessage("cmd:halt,src:APP,dst:GUI,msg:\"APP1\"}", 8080);
         }
         private void App_Exited2(object sender, System.EventArgs e)
         {
             pidApps[1] = null;
             Console.WriteLine("eeeeeeee");
-            comunications.sendMessage("{cmd:halt, src:APP, dst:GUI, msg:\"APP2\"}", 8080);
+            comunications.sendMessage("{cmd:halt,src:APP,dst:GUI,msg:\"APP2\"}", 8080);
         }
         private void App_Exited3(object sender, System.EventArgs e)
         {
             pidApps[2] = null;
             Console.WriteLine("iiiiiiiiiii");
-            comunications.sendMessage("{cmd:halt, src:APP, dst:GUI, msg:\"APP3\"}", 8080);
+            comunications.sendMessage("{cmd:halt,src:APP,dst:GUI,msg:\"APP3\"}", 8080);
         }
 
     }

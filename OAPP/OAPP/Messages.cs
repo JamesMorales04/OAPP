@@ -28,7 +28,6 @@ namespace OAPP
 
         public void Actions(string msg)
         {
-            Console.WriteLine(msg);
             string info = "";
             string[] inmsg;
             string[] msgClean = msg.Replace("<EOF>", "").Replace("{", "").Replace("}", "").Split(',');
@@ -42,7 +41,6 @@ namespace OAPP
                 switch (action[1])
                 {
                     case "start":
-                        Console.WriteLine("hola");
                         inmsg = msgClean[3].Split('\"');
                         info = functions.startApps(inmsg[1]);
                         comunication.sendMessage(info, 8080);
@@ -74,13 +72,13 @@ namespace OAPP
             switch (value)
             {
                 case 0:
-                    msg = "{codterm:0, msg:”OK”}";
+                    msg = "{codterm:0,msg:”OK”}";
                     break;
                 case 1:
-                    msg = "{codterm:1, msg:”0”}";
+                    msg = "{codterm:1,msg:”0”}";
                     break;
                 case 2:
-                    msg = "{codterm:2, msg:”Err”}";
+                    msg = "{codterm:2,msg:”Err”}";
                     break;
             }
             return msg;

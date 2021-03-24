@@ -19,7 +19,9 @@ namespace OAPP
 
         public void sendMessage(string msg, int port)
         {
+            
             msg += "<EOF>";
+            Console.WriteLine(msg);
             byte[] msgAux = Encoding.ASCII.GetBytes(msg);
             StartClient(msgAux, port);
 
