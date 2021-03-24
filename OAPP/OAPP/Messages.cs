@@ -45,7 +45,7 @@ namespace OAPP
                         Console.WriteLine("hola");
                         inmsg = msgClean[3].Split('\"');
                         info = functions.startApps(inmsg[1]);
-                        comunication.sendMessage(info, 8081);
+                        comunication.sendMessage(info, 8080);
                         break;
                     case "halt":
                         inmsg = msgClean[3].Split('\"');
