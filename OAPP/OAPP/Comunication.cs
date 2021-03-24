@@ -51,7 +51,8 @@ namespace OAPP
 
                     int bytesRec = sender.Receive(bytes);
 
-                    messages.Actions(Encoding.ASCII.GetString(bytes, 0, bytesRec));
+
+                    //messages.Actions(Encoding.ASCII.GetString(bytes, 0, bytesRec));
 
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
